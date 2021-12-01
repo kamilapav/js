@@ -2,7 +2,7 @@ class flourfactory extends Phaser.Scene {
 
        constructor() {
            super({ key: 'flourfactory' });
-           window.holdpresent = 0
+           window.holdflour = 0
            // Put global variable here
        }
    
@@ -76,9 +76,9 @@ class flourfactory extends Phaser.Scene {
         
              
 
-             this.flourLayer.setCollisionByProperty({ flours: true })
-             this.flourLayer.setCollisionByProperty({ flour: false })
-             this.flourLayer.setCollisionByProperty({ pack: false })
+             this.flourLayer.setCollisionByProperty({ flour: true })
+             //this.flourLayer.setCollisionByProperty({ flour: false })
+             //this.flourLayer.setCollisionByProperty({ pack: false })
 
              // collect item
             this.flour = this.physics.add.sprite(231,311, 'flour');
@@ -137,7 +137,7 @@ class flourfactory extends Phaser.Scene {
              }
 
 
-            // Function to hold present
+            // Function to hold flour
             holditem(player){
             console.log("hold item")
     
